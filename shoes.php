@@ -53,6 +53,36 @@ class Sneaker extends Shoe
         }
     }
 }
+class FlipFlop extends Shoe 
+{
+    public $laces;
+    public $typeOfShoe;
+    public $height;
+
+    public function __construct($laces, $typeOfShoe, $height)
+    {
+        $this->laces = $laces;
+        $this->typeOfShoe = $typeOfShoe;
+        $this->height = $height;
+    }
+    public function kindOfShoe() {
+        print "These are {$this->typeOfShoe}.";
+        print "<br>";
+        print "These {$this->typeOfShoe} are {$this->height} cm tall.";
+        print "<br>";
+    }
+    public function laces() {
+        print "Do they have laces? ";
+        if ($this->laces == true)
+        {
+            print "Yes.";
+            print "<br>";
+        } else {
+            print "No.";
+            print "<br>";
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,28 +96,44 @@ class Sneaker extends Shoe
 <body>
     <div id="container">
         <main>
-            <div id="adidas">
+            <div id="adidas" class="shoes">
                 <?php
                     $adidas = new Shoe("white", 44, 8, "Adidas", "Leather");
                     $adidas->super();
-                    $adidas = new Sneaker(true, "sneakers", 8);
+                    $adidas = new Sneaker(true, "Sneakers", 8);
                     $adidas->kindOfShoe();
                     $adidas->laces();
                 ?>
             </div>
-            <div id="nike">
+            <div id="nike" class="shoes">
                 <?php
                     $nike = new Shoe("white", 41, 5, "Nike", "Leather");
                     $nike->super();
-                    $nike = new Sneaker(true, "sneakers", 5);
+                    $nike = new Sneaker(true, "Sneakers", 5);
                     $nike->kindOfShoe();
                     $nike->laces();
+
+                    // $nike = new Shoe("white", 44, 8, "Adidas", "Leather");
+                    // $nike->super();
+                    // $nike = new Sneaker(true, "Sneakers", 8);
+                    // $nike->kindOfShoe();
+                    // $nike->laces();
+                ?>
+            </div>
+            <div id="spongebob" class="shoes">
+                <?php
+                    $spongebob = new Shoe("yellow", 42, 1, "Arena", "Foam");
+                    $spongebob->super();
+                    $spongebob = new Sneaker(false, "Flip Flops", 1);
+                    $spongebob->kindOfShoe();
+                    $spongebob->laces();
                 ?>
             </div>
         </main>
         <div class="buttons">
-            <button id="adidasbutton">Adidas</button>
-            <button id="nikebutton">Nike</button>
+            <button id="adidasButton">Adidas</button>
+            <button id="nikeButton">Nike</button>
+            <button id="spongebobButton">Spongebob</button>
         </div>
     </div>
 </body>
