@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+}
+#container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+main {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buttons {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#adidas {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+#nike {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    height: 5vh;
+    font-size: 2rem;
+    width: 30%;
+}
