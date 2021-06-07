@@ -96,41 +96,42 @@ class FlipFlop extends Shoe
 <body>
     <div id="container">
         <main>
-            <div id="adidas" class="shoes">
-                <?php
-                    $adidas = new Shoe("white", 44, 8, "Adidas", "Leather");
-                    $adidas->super();
-                    $adidas = new Sneaker(true, "Sneakers", 8);
-                    $adidas->kindOfShoe();
-                    $adidas->laces();
-                ?>
-            </div>
-            <div id="nike" class="shoes">
-                <?php
-                    $nike = new Shoe("white", 41, 5, "Nike", "Leather");
-                    $nike->super();
-                    $nike = new Sneaker(true, "Sneakers", 5);
-                    $nike->kindOfShoe();
-                    $nike->laces();
-
-                    // $nike = new Shoe("white", 44, 8, "Adidas", "Leather");
-                    // $nike->super();
-                    // $nike = new Sneaker(true, "Sneakers", 8);
-                    // $nike->kindOfShoe();
-                    // $nike->laces();
-                ?>
-            </div>
-            <div id="spongebob" class="shoes">
-                <?php
-                    $spongebob = new Shoe("yellow", 42, 1, "Arena", "Foam");
-                    $spongebob->super();
-                    $spongebob = new Sneaker(false, "Flip Flops", 1);
-                    $spongebob->kindOfShoe();
-                    $spongebob->laces();
-                ?>
+            <div class="shoe_info">
+                <div id="adidas" class="shoes">
+                    <?php
+                        $adidas = new Shoe("white", 44, 8, "Adidas", "Leather");
+                        $adidas->super();
+                        $adidas = new Sneaker(true, "Sneakers", 8);
+                        $adidas->kindOfShoe();
+                        $adidas->laces();
+                    ?>
+                </div>
+                <div id="nike" class="shoes">
+                    <?php
+                        $nike = new Shoe("black", 41, 5, "Nike", "Leather");
+                        $nike->super();
+                        $nike = new Sneaker(true, "Sneakers", 5);
+                        $nike->kindOfShoe();
+                        $nike->laces();
+                    ?>
+                </div>
+                <div id="spongebob" class="shoes">
+                    <?php
+                        $spongebob = new Shoe("yellow", 42, 1, "Arena", "Foam");
+                        $spongebob->super();
+                        $spongebob = new Sneaker(false, "Flip Flops", 1);
+                        $spongebob->kindOfShoe();
+                        $spongebob->laces();
+                    ?>
+                </div>
             </div>
         </main>
-        <div class="buttons">
+        <div id="shoe_outline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1048.27 598.04"><defs><style></style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="shoe_svg" id="shoe_svg" d="M16.54,171.18C7.3,187.09,13,187.9,12.61,290.53c0,0,0,0-8.07,245.63q-1,29.69-2,59.36l1043.06-6.78q-1.62-33-3.25-66c-5.05-28.5-16.9-68.71-48.91-100.09-62-60.85-161-50.4-193-49.35C701.9,376.57,548,313.14,311.41,3.56a637.08,637.08,0,0,1-103.73,68C105.73,124.93,45.83,120.7,16.54,171.18Z"/>
+            <line class="shoe_svg" x1="5.21" y1="515.69" x2="1044.49" y2="527.82"/></g></g></svg>
+        </div>
+
+        <div class="shoe_buttons" id="shoe_buttons">
             <button id="adidasButton">Adidas</button>
             <button id="nikeButton">Nike</button>
             <button id="spongebobButton">Spongebob</button>
@@ -138,4 +139,5 @@ class FlipFlop extends Shoe
     </div>
 </body>
 <script src="assets/js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </html>
