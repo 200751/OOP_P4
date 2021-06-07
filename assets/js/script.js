@@ -1,6 +1,21 @@
-var adidasButton = document.getElementById("adidasButton");
-var nikeButton = document.getElementById("nikeButton");
-var spongebobButton = document.getElementById("spongebobButton");
+// var adidasButton = document.getElementById("adidasButton");
+// var nikeButton = document.getElementById("nikeButton");
+// var spongebobButton = document.getElementById("spongebobButton");
+
+// let buttons = document.getElementById("shoe_buttons");
+
+
+var buttons = document.querySelectorAll('#shoe_buttons button');
+
+for(i = 0; i < buttons.length; i++)
+{
+    console.log(buttons[i]);
+    console.log(i);
+}
+
+buttons[i].addEventListener("click", function() {
+    console.log(buttons[i]);
+});
 
 var shoe_info = document.getElementById("shoe_info");
 var shoes = document.getElementsByClassName("shoes");
