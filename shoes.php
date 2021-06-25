@@ -28,12 +28,15 @@ class Sneaker extends Shoe
     public $laces;
     public $typeOfShoe;
 
-    public function __construct($laces, $typeOfShoe)
-    {
-        parent::__construct("color", "size", "height", "brand", "material");
-        $this->laces = $laces;
-        $this->typeOfShoe = $typeOfShoe;
+    // public function __construct($laces, $typeOfShoe)
+    // {
+    //     $this->laces = $laces;
+    //     $this->typeOfShoe = $typeOfShoe;
+    // }
+    public function setLaces() {
+        
     }
+
     public function kindOfShoe() {
         print "These are {$this->typeOfShoe}.";
         print "<br>";
